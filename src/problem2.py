@@ -2,13 +2,13 @@
 Exam 1, problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
+         Amanda Stouder, their colleagues and Gerardo Santana.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
 import time
-import math
 
+import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
@@ -44,6 +44,29 @@ def problem2a_testing():
     print('---------------------------------------------------------')
     print('Testing the   sum_of_digits_of_sum_of_factors   function:')
     print('---------------------------------------------------------')
+
+    # Test 1:
+    expected = 6
+    actual = sum_of_digits_of_sum_of_factors(8)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', actual)
+    # Test 2:
+    expected = 9
+    actual = sum_of_digits_of_sum_of_factors(10)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', actual)
+    # Test 3:
+    expected = 12
+    actual = sum_of_digits_of_sum_of_factors(12)
+    print('Test 3 expected:', expected)
+    print('       actual:  ', actual)
+    # Test 4:
+    expected = 6
+    actual = sum_of_digits_of_sum_of_factors(14)
+    print('Test 4 expected:', expected)
+    print('       actual:  ', actual)
+
+
 
 
 def sum_of_digits_of_sum_of_factors(n):
@@ -309,6 +332,15 @@ def problem2b(a, b, x):
          is great than or equal to 5 are: 16, 18, 20, and 24,
          and the sum   16 + 18 + 20 + 24   is 78.
      """
+    add = 0
+    for k in range(a, b + 1):
+        number = number_of_factors(k)
+        if number > x:
+            add = add + k
+        else:
+            add = add + 0
+    return add
+
     ############################################################################
     # TODO: 4. Implement and test this function.  See the IMPORTANT NOTE below!
     #          Tests have been written for you (above).

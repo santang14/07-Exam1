@@ -158,6 +158,7 @@ def problem1b(point, win, width, height, color):
       :type height: int
       :type color:  str
     """
+    corner_1 = rg.Point(x,y)
 
     ellipse = rg.Ellipse()
     ellipse.attach_to(win)
